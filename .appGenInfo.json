@@ -1,0 +1,33 @@
+{
+  "generationParameters": {
+    "generationDate": "Fri Oct 16 2026 23:01:38 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://suse15498.mncinfosys.com:8028/sap/opu/odata4/sap/zui_gl_doc_report_v4/srvd/sap/zui_gl_doc_report/0001/",
+    "appName": "zui_gl_doc_report_v4",
+    "appTitle": "GL Line Item Report",
+    "appDescription": "GL Line Item Report",
+    "appNamespace": "com.zfi.gl",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.153.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.33.0",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Headers"
+      },
+      {
+        "type": "Navigation Entity",
+        "value": "_Items"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```",
+    "valueHelpDownloaded": true
+  }
+}
