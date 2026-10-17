@@ -73,7 +73,8 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.fe.templates": {}
+        "sap.fe.templates": {},
+        "sap.f": {}
       }
     },
     "contentDensities": {
@@ -110,17 +111,26 @@
         {
           "pattern": ":?query:",
           "name": "HeadersList",
-          "target": "HeadersList"
+          "target": [
+            "HeadersList"
+          ]
         },
         {
           "pattern": "Headers({key}):?query:",
           "name": "HeadersObjectPage",
-          "target": "HeadersObjectPage"
+          "target": [
+            "HeadersList",
+            "HeadersObjectPage"
+          ]
         },
         {
           "pattern": "Headers({key})/_Items({key2}):?query:",
           "name": "ItemsObjectPage",
-          "target": "ItemsObjectPage"
+          "target": [
+            "HeadersList",
+            "HeadersObjectPage",
+            "ItemsObjectPage"
+          ]
         }
       ],
       "targets": {
@@ -145,7 +155,8 @@
                     "type": "ResponsiveTable"
                   }
                 }
-              }
+              },
+              "hideFilterBar": true
             }
           }
         },
@@ -179,6 +190,15 @@
           }
         }
       }
+    },
+    "extends": {
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "sap.fe.templates.ListReport.ListReportController": {
+            "controllerName": "com.zfi.gl.zuigldocreportv4.ext.controller.PopUpMessage"
+          }
+        }
+      }
     }
   },
   "sap.fiori": {
@@ -188,6 +208,12 @@
   "sap.fe": {
     "app": {
       "enableLazyLoading": true
+    },
+    "macros": {
+      "table": {
+        "defaultCreationMode": "InlineCreationRows",
+        "defaultPopinLayout": "Block"
+      }
     }
   }
 }
