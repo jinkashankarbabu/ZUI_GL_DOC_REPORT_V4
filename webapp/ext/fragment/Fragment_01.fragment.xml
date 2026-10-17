@@ -1,0 +1,19 @@
+
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <ObjectStatus
+        core:require="{
+            AIFormatter: 'com/zfi/gl/zuigldocreportv4/ext/fragment/AIFormatter'
+        }"
+        text="{
+            path: 'AccountingDocumentType',
+            formatter: 'AIFormatter.getStatusText'
+        }"
+        state="{
+            path: 'AccountingDocumentType',
+            formatter: 'AIFormatter.getStatusState'
+        }" />
+
+</core:FragmentDefinition>

@@ -1,0 +1,9 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Text
+        text="AI-generated content is for informational purposes only. Please verify accounting results."
+        wrapping="true" />
+
+</core:FragmentDefinition>

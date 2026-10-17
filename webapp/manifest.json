@@ -152,11 +152,47 @@
               "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
-                    "type": "ResponsiveTable"
+                    "type": "ResponsiveTable",
+                    "enableExport": true,
+                    "personalization": true,
+                    "quickVariantSelection": {
+                      "paths": [
+                        {
+                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#table"
+                        }
+                      ],
+                      "showCounts": true
+                    },
+                    "disableCopyToClipboard": false,
+                    "enableMassEdit": false,
+                    "popinLayout": "GridSmall",
+                    "widthIncludingColumnHeader": true
+                  },
+                  "columns": {
+                    "Fragment_01": {
+                      "header": "AI Analysis",
+                      "position": {
+                        "anchor": "DataField::PostingDate",
+                        "placement": "After"
+                      },
+                      "template": "com.zfi.gl.zuigldocreportv4.ext.fragment.Fragment_01",
+                      "aiNotice": {
+                        "contentFragmentName": "com.zfi.gl.zuigldocreportv4.ext.fragment.AI"
+                      },
+                      "availability": "Default",
+                      "horizontalAlign": "Begin",
+                      "importance": "Medium",
+                      "width": "180px"
+                    },
+                    "DataField::PostingDate": {
+                      "aiNotice": false
+                    }
                   }
                 }
               },
-              "hideFilterBar": false
+              "hideFilterBar": false,
+              "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#table",
+              "initialLoad": "Enabled"
             }
           }
         },
@@ -173,6 +209,14 @@
                   "detail": {
                     "route": "ItemsObjectPage"
                   }
+                }
+              },
+              "content": {
+                "header": {
+                  "aiNotice": {
+                    "contentFragmentName": "com.zfi.gl.zuigldocreportv4.ext.fragment.AI"
+                  },
+                  "anchorBarVisible": true
                 }
               }
             }
@@ -193,11 +237,7 @@
     },
     "extends": {
       "extensions": {
-        "sap.ui.controllerExtensions": {
-          "sap.fe.templates.ListReport.ListReportController": {
-            "controllerName": "com.zfi.gl.zuigldocreportv4.ext.controller.PopUpMessage"
-          }
-        }
+        "sap.ui.controllerExtensions": {}
       }
     }
   },
